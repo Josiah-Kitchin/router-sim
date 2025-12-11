@@ -1,11 +1,9 @@
 
 
 #include "event_loop.hpp"
-#include <iostream>
 
 bool traffic_exists(const std::vector<Router> routers)
 {
-    size_t traffic_num = 0;
     for (const auto& router : routers)
     {
         if (router.num_packets_in_queue() != 0)
