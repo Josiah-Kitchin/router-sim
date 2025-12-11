@@ -1,0 +1,7 @@
+
+libs
+build
+.cache
+test/build
+test/.cache
+test/googletest
