@@ -22,12 +22,6 @@ void Router::receive(Packet* packet)
         return;
     }
 
-    if (packet->dst_ip_addr == _ip_addr)
-    {
-        Logger::get_instance().log_packet_dropped(packet, _num, "Destination Reached");
-        return;
-    }
-
     Logger::get_instance().log_packet_received(packet, _num);
     _packet_queue.enqueue(packet);
 }
@@ -38,7 +32,14 @@ void Router::forward(size_t packets)
 
     for (size_t i = 0; i < num_to_forward; i++)
     {
-        Packet*                  packet   = _packet_queue.dequeue();
+        Packet* packet = _packet_queue.dequeue();
+
+        if (_connected_host != nullptr && packet->dst_ip_addr == _connected_host->ip_addr)
+        {
+            Logger::get_instance().log_packet_delivered(packet, _num, ip_ntop(_connected_host->ip_addr));
+            continue;
+        }
+
         std::optional<RouterNum> next_hop = _forwarding_table.get_interface(packet->dst_ip_addr);
         if (!next_hop.has_value())
         {

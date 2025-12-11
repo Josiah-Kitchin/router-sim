@@ -2,11 +2,10 @@
 
 #include "topology/json_topology.hpp"
 #include "addr.hpp"
-#include <fstream> 
+#include <fstream>
 #include <stdexcept>
 
 using nlohmann::json;
-
 
 JSONTopology::JSONTopology(const std::string& file)
 {
@@ -14,7 +13,7 @@ JSONTopology::JSONTopology(const std::string& file)
     topology_file.exceptions(std::ifstream::failbit | std::ifstream::badbit);
     topology_file.open(file);
 
-    _config = json::parse(topology_file);
+    _config      = json::parse(topology_file);
     _num_routers = _config["topology"].size();
 }
 
@@ -61,22 +60,28 @@ std::vector<Router> JSONTopology::create_routers(size_t packet_queue_size) const
 
 size_t JSONTopology::num_routers() const { return _num_routers; }
 
-std::vector<std::pair<RouterNum, std::vector<Packet>>> JSONTopology::get_access_routers_and_packets() const
+std::vector<Host> JSONTopology::create_hosts() const
 {
-    std::vector<json>                                      access_routers = _config["access_routers"];
-    std::vector<std::pair<RouterNum, std::vector<Packet>>> access_data;
-    for (const auto& access_router : access_routers)
+    std::vector<Host> hosts;
+
+    for (const json& host_json : _config["hosts"])
     {
-        RouterNum           router_num = access_router["router_num"];
-        std::vector<Packet> packets;
-        for (const json& packet : access_router["packets"])
+        Host host;
+        host.gateway_router = host_json["gateway_router"];
+        host.ip_addr        = ip_pton(host_json["ip_addr"]);
+        host.mac_addr       = mac_pton(host_json["mac_addr"]);
+
+        if (host_json.contains("packets_to_send"))
         {
-            packets.push_back({.dst_ip_addr  = ip_pton(packet["dst_ip_addr"]),
-                               .src_ip_addr  = ip_pton(packet["src_ip_addr"]),
-                               .src_mac_addr = mac_pton(packet["src_mac_addr"]),
-                               .ttl          = packet["ttl"]});
+            for (const json& packet : host_json["packets_to_send"])
+            {
+                host.packets_to_send.push_back({.dst_ip_addr  = ip_pton(packet["dst_ip_addr"]),
+                                                .src_ip_addr  = ip_pton(host_json["ip_addr"]),
+                                                .src_mac_addr = mac_pton(host_json["mac_addr"]),
+                                                .ttl          = packet["ttl"]});
+            }
         }
-        access_data.push_back({router_num, std::move(packets)});
+        hosts.push_back(host);
     }
-    return access_data;
+    return hosts; 
 }

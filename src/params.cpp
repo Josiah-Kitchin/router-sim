@@ -28,6 +28,11 @@ Params parse_params(const std::string& params_json_file_path)
     }
 
     params.log_file_path = json_params.contains("log_file_path") ? json_params["log_file_path"] : "netsim_logs.txt";
+
+    params.packets_per_round = json_params["packets_per_round"];
+
+    params.forwards_per_round = json_params["forwards_per_round"];
+
     return params; 
 }
 

@@ -10,6 +10,15 @@
 
 using RouterNum = size_t;
 
+struct Host
+{
+    RouterNum gateway_router;
+    std::vector<Packet> packets_to_send;
+
+    uint32_t ip_addr; 
+    uint64_t mac_addr; 
+};
+
 struct ForwardingTableEntry
 {
     uint32_t  ip_prefix;
@@ -56,6 +65,8 @@ class Router
 
     size_t num_packets_in_queue() const { return _packet_queue.size(); }
 
+    void set_connected_host(Host* connected_host) { _connected_host = connected_host; };
+
   private:
     uint32_t _ip_addr;
     uint64_t _mac_addr;
@@ -67,4 +78,6 @@ class Router
 
     FixedQueue<Packet*> _packet_queue;
     ForwardingTable     _forwarding_table;
+
+    Host* _connected_host = nullptr; 
 };

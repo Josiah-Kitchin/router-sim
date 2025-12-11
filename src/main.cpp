@@ -21,9 +21,12 @@ int main(int argc, char** argv)
     for (auto& router : routers)
         router.set_global_topology(&routers);
 
-    auto access_routers_and_packets = topology->get_access_routers_and_packets();
+    std::vector<Host> hosts = topology->create_hosts();
 
-    run_packet_switching_loop(routers, access_routers_and_packets);
+    for (auto& host : hosts)
+        routers[host.gateway_router].set_connected_host(&host);
+
+    run_packet_switching_loop(routers, hosts, params.packets_per_round, params.forwards_per_round);
 
     std::cout << "Router Simulation Complete" << std::endl; 
 

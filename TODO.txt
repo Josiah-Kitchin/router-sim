@@ -1,0 +1,6 @@
+
+
+- Allow for packets to reach hosts 
+- Improve logging
+- Setup github README and submodules 
+- Figure out best exceptions to use 
