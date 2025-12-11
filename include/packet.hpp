@@ -16,4 +16,9 @@ struct Packet
     uint64_t src_mac_addr = 0;
 
     uint16_t ttl = 0; 
+
+
+    // used to keep packets sent by 1 router per round 
+    bool forwarded_this_round = false; 
 };
+

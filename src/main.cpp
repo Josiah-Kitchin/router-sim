@@ -12,7 +12,8 @@ int main(int argc, char** argv)
 
     Params params = parse_params(params_file);
 
-    Logger::get_instance().open_log_file(params.log_file_path);
+    if (!params.log_file_path.empty())
+        Logger::get_instance().open_log_file(params.log_file_path);
 
     std::unique_ptr<Topology> topology = get_topology_type(params);
 
@@ -28,7 +29,7 @@ int main(int argc, char** argv)
 
     run_packet_switching_loop(routers, hosts, params.packets_per_round, params.forwards_per_round);
 
-    std::cout << "Router Simulation Complete" << std::endl; 
+    std::cout << "Router Simulation Complete" << std::endl;
 
     return 0;
 }

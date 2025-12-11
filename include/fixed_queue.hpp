@@ -1,8 +1,8 @@
 
 #pragma once
 #include <cstddef>
+#include <cstring>
 #include <stdexcept>
-#include <cstring> 
 
 template <typename T> class FixedQueue
 {
@@ -55,6 +55,8 @@ template <typename T> class FixedQueue
         _capacity    = other._capacity;
         other._items = nullptr;
     }
+
+    T& peek() { return _items[_front]; }
 
     void enqueue(const T& packet)
     {

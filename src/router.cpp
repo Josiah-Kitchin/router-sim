@@ -32,6 +32,13 @@ void Router::forward(size_t packets)
 
     for (size_t i = 0; i < num_to_forward; i++)
     {
+        // Disallows packets to move more than one router per round 
+        if (_packet_queue.peek()->forwarded_this_round)
+        {
+            _packet_queue.peek()->forwarded_this_round = false; 
+            return;
+        }
+
         Packet* packet = _packet_queue.dequeue();
 
         if (_connected_host != nullptr && packet->dst_ip_addr == _connected_host->ip_addr)
@@ -46,6 +53,8 @@ void Router::forward(size_t packets)
             Logger::get_instance().log_packet_dropped(packet, _num, "Could not route packet to it's destination");
             return;
         }
+
+        packet->forwarded_this_round = true;
 
         auto [neighbor_num, weight] = _neighbors[*next_hop];
         (*_global_topology)[neighbor_num].receive(packet);

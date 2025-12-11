@@ -27,7 +27,7 @@ Params parse_params(const std::string& params_json_file_path)
         throw std::logic_error("Unknown Topology Type");
     }
 
-    params.log_file_path = json_params.contains("log_file_path") ? json_params["log_file_path"] : "netsim_logs.txt";
+    params.log_file_path = json_params.contains("log_file_path") && !json_params["log_file_path"].empty() ? json_params["log_file_path"] : "";
 
     params.packets_per_round = json_params["packets_per_round"];
 
