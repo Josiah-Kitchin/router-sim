@@ -6,9 +6,6 @@
 
 struct Packet
 {
-    uint16_t src_port = 0;
-    uint16_t dst_port = 0;
-
     uint32_t dst_ip_addr = 0;
     uint32_t src_ip_addr = 0;
 
