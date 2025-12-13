@@ -18,7 +18,7 @@ class Logger
     void           log_packet_delivered(Packet* packet, RouterNum router, const std::string& host_ip);
 
   private:
-    std::ostream* _stream; 
 
+    std::ostream* _stream; 
     std::ofstream _log_file;
 };

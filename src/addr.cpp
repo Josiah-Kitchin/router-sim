@@ -3,6 +3,7 @@
 #include "addr.hpp"
 #include <sstream> 
 
+
 uint32_t ip_pton(const std::string& ip)
 {
     uint32_t    ip_addr = 0;
@@ -59,6 +60,7 @@ std::string ip_ntop(uint32_t ip)
 
     return std::to_string(byte_four) + '.' + std::to_string(byte_three) + '.' + std::to_string(byte_two) + '.' + std::to_string(byte_one);
 }
+
 std::string mac_ntop(uint64_t mac) 
 { 
     std::string mac_address; 

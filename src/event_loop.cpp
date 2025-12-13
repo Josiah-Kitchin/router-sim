@@ -2,6 +2,7 @@
 
 #include "event_loop.hpp"
 
+
 bool traffic_exists(const std::vector<Router> routers)
 {
     for (const auto& router : routers)
@@ -14,14 +15,12 @@ bool traffic_exists(const std::vector<Router> routers)
     return false;
 }
 
-/// @brief Run the main simulation event loop. Simulation data shall not leave this scope
-/// @param routers list of routers in sim
-/// @param access_data list of access routers and the packets that will be sent through them. (Where packets originate from)
 void run_packet_switching_loop(std::vector<Router>& routers, std::vector<Host>& hosts, size_t packets_per_round, size_t forwards_per_round)
 {
     size_t total_packet_send_rounds = 0;
     for (auto& host : hosts)
         total_packet_send_rounds = std::max(host.packets_to_send.size(), total_packet_send_rounds);
+
 
     size_t packet_send_round = 0;
 

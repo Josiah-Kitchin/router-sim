@@ -12,9 +12,6 @@ struct Packet
     uint32_t dst_ip_addr = 0;
     uint32_t src_ip_addr = 0;
 
-    uint64_t dst_mac_addr = 0;
-    uint64_t src_mac_addr = 0;
-
     uint16_t ttl = 0; 
 
 

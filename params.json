@@ -1,0 +1,10 @@
+{
+    "topology_type": "json", 
+    "json_file_path": "../pytop.json", 
+    "packet_queue_size": 50, 
+    "packets_per_round": 1, 
+    "forwards_per_round": 1
+}
+
+
+

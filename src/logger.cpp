@@ -14,7 +14,10 @@ void Logger::open_log_file(const std::string& file_path)
     logger._stream = &logger._log_file;
 }
 
-void Logger::log_packet_received(Packet* packet, RouterNum router) { *_stream << "Packet received from Router: " << router << '\n'; }
+void Logger::log_packet_received(Packet* packet, RouterNum router) 
+{ 
+    *_stream << "Packet received from Router: " << router << '\n'; 
+}
 
 void Logger::log_packet_delivered(Packet* packet, RouterNum router, const std::string& host_ip)
 {
@@ -25,3 +28,6 @@ void Logger::log_packet_dropped(Packet* packet, RouterNum router, std::string_vi
 {
     *_stream << "Packet dropped from Router " << router << " for reason: " << reason << '\n';
 }
+
+
+

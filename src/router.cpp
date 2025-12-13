@@ -4,8 +4,8 @@
 #include "addr.hpp"
 #include "logger.hpp"
 
-Router::Router(const std::string& ip_addr, const std::string& mac_addr, RouterNum router_num, size_t packet_queue_size)
-    : _ip_addr(ip_pton(ip_addr)), _mac_addr(mac_pton(mac_addr)), _num(router_num), _packet_queue(packet_queue_size)
+Router::Router( RouterNum router_num, size_t packet_queue_size)
+    :  _num(router_num), _packet_queue(packet_queue_size)
 {
 }
 
@@ -56,7 +56,6 @@ void Router::forward(size_t packets)
 
         packet->forwarded_this_round = true;
 
-        auto [neighbor_num, weight] = _neighbors[*next_hop];
-        (*_global_topology)[neighbor_num].receive(packet);
+        (*_global_topology)[*next_hop].receive(packet);
     }
 }
