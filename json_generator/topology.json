@@ -1,0 +1,63 @@
+{
+    "routers": [
+        {
+            "id": 0,
+            "neighbors": [
+                {
+                    "id": 1,
+                    "weight": 1
+                }
+            ],
+            "forwarding_table": {
+                "entries": {
+                    "prefix": "192.168.55.0",
+                    "prefix_bit": 24,
+                    "router_interface_id": 1
+                }
+            }
+        },
+        {
+            "id": 1,
+            "neighbors": [
+                {
+                    "id": 1,
+                    "weight": 1
+                }
+            ],
+            "forwarding_table": {
+                "entries": {
+                    "prefix": "192.168.55.0",
+                    "prefix_bit": 24,
+                    "router_interface_id": 2
+                }
+            }
+        },
+        {
+            "id": 2,
+            "neighbors": [
+                {
+                    "id": 1,
+                    "weight": 1
+                }
+            ],
+            "forwarding_table": {}
+        }
+    ],
+    "hosts": [
+        {
+            "gateway_router_id": 0,
+            "ip_addr": "10.0.0.1",
+            "packets_to_send": [
+                {
+                    "dst_ip_addr": "192.168.55.1",
+                    "ttl": 5
+                }
+            ]
+        },
+        {
+            "gateway_router_id": 2,
+            "ip_addr": "192.168.55.1",
+            "packets_to_send": []
+        }
+    ]
+}

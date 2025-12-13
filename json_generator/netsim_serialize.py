@@ -3,10 +3,6 @@
 import json 
 from dataclasses import dataclass
 
-"""
-Used for generating JSON topologies that can be fed into the routing simulation for testing purposes
-
-"""
 
 @dataclass
 class Packet: 
@@ -33,7 +29,7 @@ class Router:
         id: int
         neighbors: list[tuple[int, int]]
         forwarding_table: list[ForwardingTableEntry]
-        default_gateway_id: int
+        default_gateway_id: int | None = None
 
 
 def prepare_host_serilization(hosts: list[Host]) -> list: 
@@ -60,28 +56,15 @@ def prepare_router_serilization(routers: list[Router]) -> list:
                 "prefix_bit": entry.prefix_bit, 
                 "router_interface_id": entry.router_interface_id
              }
-        if router.default_gateway_id > 0: 
+        if router.default_gateway_id is not None: 
             json_dict["forwarding_table"]["default_gateway_id"] = router.default_gateway_id
         router_dicts.append(json_dict)
     return router_dicts
 
 
-
-def main(): 
-    routers = []
-    routers.append(Router(0, [(1, 1)], [ForwardingTableEntry("192.168.55.0", 24, 1)], -1))
-    routers.append(Router(1, [(1, 1)], [ForwardingTableEntry("192.168.55.0", 24, 2)], -1))
-    routers.append(Router(2, [(1, 1)], [], -1))
-
-    hosts = []
-    hosts.append(Host(0, "10.0.0.1", [Packet("192.168.55.1", 5)]))
-    hosts.append(Host(2, "192.168.55.1", []))
-
-    with open ("pytop.json", "w") as file: 
+def generate_json(file_name: str, routers: list[Router], hosts: list[Host]): 
+    with open(file_name, "w") as file: 
         json.dump({"routers": prepare_router_serilization(routers), "hosts": prepare_host_serilization(hosts)}, 
                   file, indent=4, )
-        
 
-if __name__ == "__main__": 
-    main()
 
