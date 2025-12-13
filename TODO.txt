@@ -1,7 +1,0 @@
-
-
-- Packets should cross a link once per round, not multiple each round. 
-- Improve logging
-- Setup github README and submodules 
-- Figure out best exceptions to use 
-
