@@ -14,3 +14,4 @@ class Topology
     virtual std::vector<Host>   create_hosts() const                           = 0;
     virtual size_t              num_routers() const                            = 0;
 };
+

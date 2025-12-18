@@ -5,9 +5,7 @@
 #include "logger.hpp"
 
 Router::Router( RouterNum router_num, size_t packet_queue_size)
-    :  _num(router_num), _packet_queue(packet_queue_size)
-{
-}
+    :  _num(router_num), _packet_queue(packet_queue_size) {}
 
 void Router::add_neighbor(RouterNum neighbor, int weight) { _neighbors.emplace_back(neighbor, weight); }
 

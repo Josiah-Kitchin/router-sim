@@ -1,6 +1,7 @@
 {
     "topology_type": "json", 
-    "json_file_path": "../pytop.json", 
+    "control_type": "OSPF",
+    "json_file_path": "../json_generator/topology.json", 
     "packet_queue_size": 50, 
     "packets_per_round": 1, 
     "forwards_per_round": 1

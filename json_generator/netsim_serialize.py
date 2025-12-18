@@ -26,10 +26,10 @@ class ForwardingTableEntry:
 
 @dataclass 
 class Router: 
-        id: int
-        neighbors: list[tuple[int, int]]
-        forwarding_table: list[ForwardingTableEntry]
-        default_gateway_id: int | None = None
+    id: int
+    neighbors: list[tuple[int, int]]
+    forwarding_table: list[ForwardingTableEntry]
+    default_gateway_id: int | None = None
 
 
 def prepare_host_serilization(hosts: list[Host]) -> list: 
@@ -47,15 +47,15 @@ def prepare_host_serilization(hosts: list[Host]) -> list:
 def prepare_router_serilization(routers: list[Router]) -> list:
     router_dicts = [] 
     for router in routers: 
-        json_dict = { "id": router.id, "neighbors": [], "forwarding_table": {} }
+        json_dict = { "id": router.id, "neighbors": [], "forwarding_table": { "entries": [] } }
         for id, weight in router.neighbors: 
             json_dict["neighbors"].append({"id": id, "weight": weight})
         for entry in router.forwarding_table: 
-             json_dict["forwarding_table"]["entries"] = {
+             json_dict["forwarding_table"]["entries"].append({
                 "prefix": entry.prefix, 
                 "prefix_bit": entry.prefix_bit, 
                 "router_interface_id": entry.router_interface_id
-             }
+             })
         if router.default_gateway_id is not None: 
             json_dict["forwarding_table"]["default_gateway_id"] = router.default_gateway_id
         router_dicts.append(json_dict)

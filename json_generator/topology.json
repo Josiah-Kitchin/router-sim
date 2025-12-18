@@ -9,38 +9,2204 @@
                 }
             ],
             "forwarding_table": {
-                "entries": {
-                    "prefix": "192.168.55.0",
-                    "prefix_bit": 24,
-                    "router_interface_id": 1
-                }
+                "entries": [
+                    {
+                        "prefix": "192.168.55.0",
+                        "prefix_bit": 24,
+                        "router_interface_id": 1
+                    }
+                ]
             }
         },
         {
             "id": 1,
             "neighbors": [
                 {
-                    "id": 1,
+                    "id": 2,
+                    "weight": 1
+                },
+                {
+                    "id": 0,
                     "weight": 1
                 }
             ],
             "forwarding_table": {
-                "entries": {
-                    "prefix": "192.168.55.0",
-                    "prefix_bit": 24,
-                    "router_interface_id": 2
-                }
+                "entries": [
+                    {
+                        "prefix": "192.168.55.0",
+                        "prefix_bit": 24,
+                        "router_interface_id": 2
+                    }
+                ]
             }
         },
         {
             "id": 2,
             "neighbors": [
                 {
+                    "id": 3,
+                    "weight": 1
+                },
+                {
                     "id": 1,
                     "weight": 1
                 }
             ],
-            "forwarding_table": {}
+            "forwarding_table": {
+                "entries": [
+                    {
+                        "prefix": "192.168.55.0",
+                        "prefix_bit": 24,
+                        "router_interface_id": 3
+                    }
+                ]
+            }
+        },
+        {
+            "id": 3,
+            "neighbors": [
+                {
+                    "id": 4,
+                    "weight": 1
+                },
+                {
+                    "id": 2,
+                    "weight": 1
+                }
+            ],
+            "forwarding_table": {
+                "entries": [
+                    {
+                        "prefix": "192.168.55.0",
+                        "prefix_bit": 24,
+                        "router_interface_id": 4
+                    }
+                ]
+            }
+        },
+        {
+            "id": 4,
+            "neighbors": [
+                {
+                    "id": 5,
+                    "weight": 1
+                },
+                {
+                    "id": 3,
+                    "weight": 1
+                }
+            ],
+            "forwarding_table": {
+                "entries": [
+                    {
+                        "prefix": "192.168.55.0",
+                        "prefix_bit": 24,
+                        "router_interface_id": 5
+                    }
+                ]
+            }
+        },
+        {
+            "id": 5,
+            "neighbors": [
+                {
+                    "id": 6,
+                    "weight": 1
+                },
+                {
+                    "id": 4,
+                    "weight": 1
+                }
+            ],
+            "forwarding_table": {
+                "entries": [
+                    {
+                        "prefix": "192.168.55.0",
+                        "prefix_bit": 24,
+                        "router_interface_id": 6
+                    }
+                ]
+            }
+        },
+        {
+            "id": 6,
+            "neighbors": [
+                {
+                    "id": 7,
+                    "weight": 1
+                },
+                {
+                    "id": 5,
+                    "weight": 1
+                }
+            ],
+            "forwarding_table": {
+                "entries": [
+                    {
+                        "prefix": "192.168.55.0",
+                        "prefix_bit": 24,
+                        "router_interface_id": 7
+                    }
+                ]
+            }
+        },
+        {
+            "id": 7,
+            "neighbors": [
+                {
+                    "id": 8,
+                    "weight": 1
+                },
+                {
+                    "id": 6,
+                    "weight": 1
+                }
+            ],
+            "forwarding_table": {
+                "entries": [
+                    {
+                        "prefix": "192.168.55.0",
+                        "prefix_bit": 24,
+                        "router_interface_id": 8
+                    }
+                ]
+            }
+        },
+        {
+            "id": 8,
+            "neighbors": [
+                {
+                    "id": 9,
+                    "weight": 1
+                },
+                {
+                    "id": 7,
+                    "weight": 1
+                }
+            ],
+            "forwarding_table": {
+                "entries": [
+                    {
+                        "prefix": "192.168.55.0",
+                        "prefix_bit": 24,
+                        "router_interface_id": 9
+                    }
+                ]
+            }
+        },
+        {
+            "id": 9,
+            "neighbors": [
+                {
+                    "id": 10,
+                    "weight": 1
+                },
+                {
+                    "id": 8,
+                    "weight": 1
+                }
+            ],
+            "forwarding_table": {
+                "entries": [
+                    {
+                        "prefix": "192.168.55.0",
+                        "prefix_bit": 24,
+                        "router_interface_id": 10
+                    }
+                ]
+            }
+        },
+        {
+            "id": 10,
+            "neighbors": [
+                {
+                    "id": 11,
+                    "weight": 1
+                },
+                {
+                    "id": 9,
+                    "weight": 1
+                }
+            ],
+            "forwarding_table": {
+                "entries": [
+                    {
+                        "prefix": "192.168.55.0",
+                        "prefix_bit": 24,
+                        "router_interface_id": 11
+                    }
+                ]
+            }
+        },
+        {
+            "id": 11,
+            "neighbors": [
+                {
+                    "id": 12,
+                    "weight": 1
+                },
+                {
+                    "id": 10,
+                    "weight": 1
+                }
+            ],
+            "forwarding_table": {
+                "entries": [
+                    {
+                        "prefix": "192.168.55.0",
+                        "prefix_bit": 24,
+                        "router_interface_id": 12
+                    }
+                ]
+            }
+        },
+        {
+            "id": 12,
+            "neighbors": [
+                {
+                    "id": 13,
+                    "weight": 1
+                },
+                {
+                    "id": 11,
+                    "weight": 1
+                }
+            ],
+            "forwarding_table": {
+                "entries": [
+                    {
+                        "prefix": "192.168.55.0",
+                        "prefix_bit": 24,
+                        "router_interface_id": 13
+                    }
+                ]
+            }
+        },
+        {
+            "id": 13,
+            "neighbors": [
+                {
+                    "id": 14,
+                    "weight": 1
+                },
+                {
+                    "id": 12,
+                    "weight": 1
+                }
+            ],
+            "forwarding_table": {
+                "entries": [
+                    {
+                        "prefix": "192.168.55.0",
+                        "prefix_bit": 24,
+                        "router_interface_id": 14
+                    }
+                ]
+            }
+        },
+        {
+            "id": 14,
+            "neighbors": [
+                {
+                    "id": 15,
+                    "weight": 1
+                },
+                {
+                    "id": 13,
+                    "weight": 1
+                }
+            ],
+            "forwarding_table": {
+                "entries": [
+                    {
+                        "prefix": "192.168.55.0",
+                        "prefix_bit": 24,
+                        "router_interface_id": 15
+                    }
+                ]
+            }
+        },
+        {
+            "id": 15,
+            "neighbors": [
+                {
+                    "id": 16,
+                    "weight": 1
+                },
+                {
+                    "id": 14,
+                    "weight": 1
+                }
+            ],
+            "forwarding_table": {
+                "entries": [
+                    {
+                        "prefix": "192.168.55.0",
+                        "prefix_bit": 24,
+                        "router_interface_id": 16
+                    }
+                ]
+            }
+        },
+        {
+            "id": 16,
+            "neighbors": [
+                {
+                    "id": 17,
+                    "weight": 1
+                },
+                {
+                    "id": 15,
+                    "weight": 1
+                }
+            ],
+            "forwarding_table": {
+                "entries": [
+                    {
+                        "prefix": "192.168.55.0",
+                        "prefix_bit": 24,
+                        "router_interface_id": 17
+                    }
+                ]
+            }
+        },
+        {
+            "id": 17,
+            "neighbors": [
+                {
+                    "id": 18,
+                    "weight": 1
+                },
+                {
+                    "id": 16,
+                    "weight": 1
+                }
+            ],
+            "forwarding_table": {
+                "entries": [
+                    {
+                        "prefix": "192.168.55.0",
+                        "prefix_bit": 24,
+                        "router_interface_id": 18
+                    }
+                ]
+            }
+        },
+        {
+            "id": 18,
+            "neighbors": [
+                {
+                    "id": 19,
+                    "weight": 1
+                },
+                {
+                    "id": 17,
+                    "weight": 1
+                }
+            ],
+            "forwarding_table": {
+                "entries": [
+                    {
+                        "prefix": "192.168.55.0",
+                        "prefix_bit": 24,
+                        "router_interface_id": 19
+                    }
+                ]
+            }
+        },
+        {
+            "id": 19,
+            "neighbors": [
+                {
+                    "id": 20,
+                    "weight": 1
+                },
+                {
+                    "id": 18,
+                    "weight": 1
+                }
+            ],
+            "forwarding_table": {
+                "entries": [
+                    {
+                        "prefix": "192.168.55.0",
+                        "prefix_bit": 24,
+                        "router_interface_id": 20
+                    }
+                ]
+            }
+        },
+        {
+            "id": 20,
+            "neighbors": [
+                {
+                    "id": 21,
+                    "weight": 1
+                },
+                {
+                    "id": 19,
+                    "weight": 1
+                }
+            ],
+            "forwarding_table": {
+                "entries": [
+                    {
+                        "prefix": "192.168.55.0",
+                        "prefix_bit": 24,
+                        "router_interface_id": 21
+                    }
+                ]
+            }
+        },
+        {
+            "id": 21,
+            "neighbors": [
+                {
+                    "id": 22,
+                    "weight": 1
+                },
+                {
+                    "id": 20,
+                    "weight": 1
+                }
+            ],
+            "forwarding_table": {
+                "entries": [
+                    {
+                        "prefix": "192.168.55.0",
+                        "prefix_bit": 24,
+                        "router_interface_id": 22
+                    }
+                ]
+            }
+        },
+        {
+            "id": 22,
+            "neighbors": [
+                {
+                    "id": 23,
+                    "weight": 1
+                },
+                {
+                    "id": 21,
+                    "weight": 1
+                }
+            ],
+            "forwarding_table": {
+                "entries": [
+                    {
+                        "prefix": "192.168.55.0",
+                        "prefix_bit": 24,
+                        "router_interface_id": 23
+                    }
+                ]
+            }
+        },
+        {
+            "id": 23,
+            "neighbors": [
+                {
+                    "id": 24,
+                    "weight": 1
+                },
+                {
+                    "id": 22,
+                    "weight": 1
+                }
+            ],
+            "forwarding_table": {
+                "entries": [
+                    {
+                        "prefix": "192.168.55.0",
+                        "prefix_bit": 24,
+                        "router_interface_id": 24
+                    }
+                ]
+            }
+        },
+        {
+            "id": 24,
+            "neighbors": [
+                {
+                    "id": 25,
+                    "weight": 1
+                },
+                {
+                    "id": 23,
+                    "weight": 1
+                }
+            ],
+            "forwarding_table": {
+                "entries": [
+                    {
+                        "prefix": "192.168.55.0",
+                        "prefix_bit": 24,
+                        "router_interface_id": 25
+                    }
+                ]
+            }
+        },
+        {
+            "id": 25,
+            "neighbors": [
+                {
+                    "id": 26,
+                    "weight": 1
+                },
+                {
+                    "id": 24,
+                    "weight": 1
+                }
+            ],
+            "forwarding_table": {
+                "entries": [
+                    {
+                        "prefix": "192.168.55.0",
+                        "prefix_bit": 24,
+                        "router_interface_id": 26
+                    }
+                ]
+            }
+        },
+        {
+            "id": 26,
+            "neighbors": [
+                {
+                    "id": 27,
+                    "weight": 1
+                },
+                {
+                    "id": 25,
+                    "weight": 1
+                }
+            ],
+            "forwarding_table": {
+                "entries": [
+                    {
+                        "prefix": "192.168.55.0",
+                        "prefix_bit": 24,
+                        "router_interface_id": 27
+                    }
+                ]
+            }
+        },
+        {
+            "id": 27,
+            "neighbors": [
+                {
+                    "id": 28,
+                    "weight": 1
+                },
+                {
+                    "id": 26,
+                    "weight": 1
+                }
+            ],
+            "forwarding_table": {
+                "entries": [
+                    {
+                        "prefix": "192.168.55.0",
+                        "prefix_bit": 24,
+                        "router_interface_id": 28
+                    }
+                ]
+            }
+        },
+        {
+            "id": 28,
+            "neighbors": [
+                {
+                    "id": 29,
+                    "weight": 1
+                },
+                {
+                    "id": 27,
+                    "weight": 1
+                }
+            ],
+            "forwarding_table": {
+                "entries": [
+                    {
+                        "prefix": "192.168.55.0",
+                        "prefix_bit": 24,
+                        "router_interface_id": 29
+                    }
+                ]
+            }
+        },
+        {
+            "id": 29,
+            "neighbors": [
+                {
+                    "id": 30,
+                    "weight": 1
+                },
+                {
+                    "id": 28,
+                    "weight": 1
+                }
+            ],
+            "forwarding_table": {
+                "entries": [
+                    {
+                        "prefix": "192.168.55.0",
+                        "prefix_bit": 24,
+                        "router_interface_id": 30
+                    }
+                ]
+            }
+        },
+        {
+            "id": 30,
+            "neighbors": [
+                {
+                    "id": 31,
+                    "weight": 1
+                },
+                {
+                    "id": 29,
+                    "weight": 1
+                }
+            ],
+            "forwarding_table": {
+                "entries": [
+                    {
+                        "prefix": "192.168.55.0",
+                        "prefix_bit": 24,
+                        "router_interface_id": 31
+                    }
+                ]
+            }
+        },
+        {
+            "id": 31,
+            "neighbors": [
+                {
+                    "id": 32,
+                    "weight": 1
+                },
+                {
+                    "id": 30,
+                    "weight": 1
+                }
+            ],
+            "forwarding_table": {
+                "entries": [
+                    {
+                        "prefix": "192.168.55.0",
+                        "prefix_bit": 24,
+                        "router_interface_id": 32
+                    }
+                ]
+            }
+        },
+        {
+            "id": 32,
+            "neighbors": [
+                {
+                    "id": 33,
+                    "weight": 1
+                },
+                {
+                    "id": 31,
+                    "weight": 1
+                }
+            ],
+            "forwarding_table": {
+                "entries": [
+                    {
+                        "prefix": "192.168.55.0",
+                        "prefix_bit": 24,
+                        "router_interface_id": 33
+                    }
+                ]
+            }
+        },
+        {
+            "id": 33,
+            "neighbors": [
+                {
+                    "id": 34,
+                    "weight": 1
+                },
+                {
+                    "id": 32,
+                    "weight": 1
+                }
+            ],
+            "forwarding_table": {
+                "entries": [
+                    {
+                        "prefix": "192.168.55.0",
+                        "prefix_bit": 24,
+                        "router_interface_id": 34
+                    }
+                ]
+            }
+        },
+        {
+            "id": 34,
+            "neighbors": [
+                {
+                    "id": 35,
+                    "weight": 1
+                },
+                {
+                    "id": 33,
+                    "weight": 1
+                }
+            ],
+            "forwarding_table": {
+                "entries": [
+                    {
+                        "prefix": "192.168.55.0",
+                        "prefix_bit": 24,
+                        "router_interface_id": 35
+                    }
+                ]
+            }
+        },
+        {
+            "id": 35,
+            "neighbors": [
+                {
+                    "id": 36,
+                    "weight": 1
+                },
+                {
+                    "id": 34,
+                    "weight": 1
+                }
+            ],
+            "forwarding_table": {
+                "entries": [
+                    {
+                        "prefix": "192.168.55.0",
+                        "prefix_bit": 24,
+                        "router_interface_id": 36
+                    }
+                ]
+            }
+        },
+        {
+            "id": 36,
+            "neighbors": [
+                {
+                    "id": 37,
+                    "weight": 1
+                },
+                {
+                    "id": 35,
+                    "weight": 1
+                }
+            ],
+            "forwarding_table": {
+                "entries": [
+                    {
+                        "prefix": "192.168.55.0",
+                        "prefix_bit": 24,
+                        "router_interface_id": 37
+                    }
+                ]
+            }
+        },
+        {
+            "id": 37,
+            "neighbors": [
+                {
+                    "id": 38,
+                    "weight": 1
+                },
+                {
+                    "id": 36,
+                    "weight": 1
+                }
+            ],
+            "forwarding_table": {
+                "entries": [
+                    {
+                        "prefix": "192.168.55.0",
+                        "prefix_bit": 24,
+                        "router_interface_id": 38
+                    }
+                ]
+            }
+        },
+        {
+            "id": 38,
+            "neighbors": [
+                {
+                    "id": 39,
+                    "weight": 1
+                },
+                {
+                    "id": 37,
+                    "weight": 1
+                }
+            ],
+            "forwarding_table": {
+                "entries": [
+                    {
+                        "prefix": "192.168.55.0",
+                        "prefix_bit": 24,
+                        "router_interface_id": 39
+                    }
+                ]
+            }
+        },
+        {
+            "id": 39,
+            "neighbors": [
+                {
+                    "id": 40,
+                    "weight": 1
+                },
+                {
+                    "id": 38,
+                    "weight": 1
+                }
+            ],
+            "forwarding_table": {
+                "entries": [
+                    {
+                        "prefix": "192.168.55.0",
+                        "prefix_bit": 24,
+                        "router_interface_id": 40
+                    }
+                ]
+            }
+        },
+        {
+            "id": 40,
+            "neighbors": [
+                {
+                    "id": 41,
+                    "weight": 1
+                },
+                {
+                    "id": 39,
+                    "weight": 1
+                }
+            ],
+            "forwarding_table": {
+                "entries": [
+                    {
+                        "prefix": "192.168.55.0",
+                        "prefix_bit": 24,
+                        "router_interface_id": 41
+                    }
+                ]
+            }
+        },
+        {
+            "id": 41,
+            "neighbors": [
+                {
+                    "id": 42,
+                    "weight": 1
+                },
+                {
+                    "id": 40,
+                    "weight": 1
+                }
+            ],
+            "forwarding_table": {
+                "entries": [
+                    {
+                        "prefix": "192.168.55.0",
+                        "prefix_bit": 24,
+                        "router_interface_id": 42
+                    }
+                ]
+            }
+        },
+        {
+            "id": 42,
+            "neighbors": [
+                {
+                    "id": 43,
+                    "weight": 1
+                },
+                {
+                    "id": 41,
+                    "weight": 1
+                }
+            ],
+            "forwarding_table": {
+                "entries": [
+                    {
+                        "prefix": "192.168.55.0",
+                        "prefix_bit": 24,
+                        "router_interface_id": 43
+                    }
+                ]
+            }
+        },
+        {
+            "id": 43,
+            "neighbors": [
+                {
+                    "id": 44,
+                    "weight": 1
+                },
+                {
+                    "id": 42,
+                    "weight": 1
+                }
+            ],
+            "forwarding_table": {
+                "entries": [
+                    {
+                        "prefix": "192.168.55.0",
+                        "prefix_bit": 24,
+                        "router_interface_id": 44
+                    }
+                ]
+            }
+        },
+        {
+            "id": 44,
+            "neighbors": [
+                {
+                    "id": 45,
+                    "weight": 1
+                },
+                {
+                    "id": 43,
+                    "weight": 1
+                }
+            ],
+            "forwarding_table": {
+                "entries": [
+                    {
+                        "prefix": "192.168.55.0",
+                        "prefix_bit": 24,
+                        "router_interface_id": 45
+                    }
+                ]
+            }
+        },
+        {
+            "id": 45,
+            "neighbors": [
+                {
+                    "id": 46,
+                    "weight": 1
+                },
+                {
+                    "id": 44,
+                    "weight": 1
+                }
+            ],
+            "forwarding_table": {
+                "entries": [
+                    {
+                        "prefix": "192.168.55.0",
+                        "prefix_bit": 24,
+                        "router_interface_id": 46
+                    }
+                ]
+            }
+        },
+        {
+            "id": 46,
+            "neighbors": [
+                {
+                    "id": 47,
+                    "weight": 1
+                },
+                {
+                    "id": 45,
+                    "weight": 1
+                }
+            ],
+            "forwarding_table": {
+                "entries": [
+                    {
+                        "prefix": "192.168.55.0",
+                        "prefix_bit": 24,
+                        "router_interface_id": 47
+                    }
+                ]
+            }
+        },
+        {
+            "id": 47,
+            "neighbors": [
+                {
+                    "id": 48,
+                    "weight": 1
+                },
+                {
+                    "id": 46,
+                    "weight": 1
+                }
+            ],
+            "forwarding_table": {
+                "entries": [
+                    {
+                        "prefix": "192.168.55.0",
+                        "prefix_bit": 24,
+                        "router_interface_id": 48
+                    }
+                ]
+            }
+        },
+        {
+            "id": 48,
+            "neighbors": [
+                {
+                    "id": 49,
+                    "weight": 1
+                },
+                {
+                    "id": 47,
+                    "weight": 1
+                }
+            ],
+            "forwarding_table": {
+                "entries": [
+                    {
+                        "prefix": "192.168.55.0",
+                        "prefix_bit": 24,
+                        "router_interface_id": 49
+                    }
+                ]
+            }
+        },
+        {
+            "id": 49,
+            "neighbors": [
+                {
+                    "id": 50,
+                    "weight": 1
+                },
+                {
+                    "id": 48,
+                    "weight": 1
+                }
+            ],
+            "forwarding_table": {
+                "entries": [
+                    {
+                        "prefix": "192.168.55.0",
+                        "prefix_bit": 24,
+                        "router_interface_id": 50
+                    }
+                ]
+            }
+        },
+        {
+            "id": 50,
+            "neighbors": [
+                {
+                    "id": 51,
+                    "weight": 1
+                },
+                {
+                    "id": 49,
+                    "weight": 1
+                }
+            ],
+            "forwarding_table": {
+                "entries": [
+                    {
+                        "prefix": "192.168.55.0",
+                        "prefix_bit": 24,
+                        "router_interface_id": 51
+                    }
+                ]
+            }
+        },
+        {
+            "id": 51,
+            "neighbors": [
+                {
+                    "id": 52,
+                    "weight": 1
+                },
+                {
+                    "id": 50,
+                    "weight": 1
+                }
+            ],
+            "forwarding_table": {
+                "entries": [
+                    {
+                        "prefix": "192.168.55.0",
+                        "prefix_bit": 24,
+                        "router_interface_id": 52
+                    }
+                ]
+            }
+        },
+        {
+            "id": 52,
+            "neighbors": [
+                {
+                    "id": 53,
+                    "weight": 1
+                },
+                {
+                    "id": 51,
+                    "weight": 1
+                }
+            ],
+            "forwarding_table": {
+                "entries": [
+                    {
+                        "prefix": "192.168.55.0",
+                        "prefix_bit": 24,
+                        "router_interface_id": 53
+                    }
+                ]
+            }
+        },
+        {
+            "id": 53,
+            "neighbors": [
+                {
+                    "id": 54,
+                    "weight": 1
+                },
+                {
+                    "id": 52,
+                    "weight": 1
+                }
+            ],
+            "forwarding_table": {
+                "entries": [
+                    {
+                        "prefix": "192.168.55.0",
+                        "prefix_bit": 24,
+                        "router_interface_id": 54
+                    }
+                ]
+            }
+        },
+        {
+            "id": 54,
+            "neighbors": [
+                {
+                    "id": 55,
+                    "weight": 1
+                },
+                {
+                    "id": 53,
+                    "weight": 1
+                }
+            ],
+            "forwarding_table": {
+                "entries": [
+                    {
+                        "prefix": "192.168.55.0",
+                        "prefix_bit": 24,
+                        "router_interface_id": 55
+                    }
+                ]
+            }
+        },
+        {
+            "id": 55,
+            "neighbors": [
+                {
+                    "id": 56,
+                    "weight": 1
+                },
+                {
+                    "id": 54,
+                    "weight": 1
+                }
+            ],
+            "forwarding_table": {
+                "entries": [
+                    {
+                        "prefix": "192.168.55.0",
+                        "prefix_bit": 24,
+                        "router_interface_id": 56
+                    }
+                ]
+            }
+        },
+        {
+            "id": 56,
+            "neighbors": [
+                {
+                    "id": 57,
+                    "weight": 1
+                },
+                {
+                    "id": 55,
+                    "weight": 1
+                }
+            ],
+            "forwarding_table": {
+                "entries": [
+                    {
+                        "prefix": "192.168.55.0",
+                        "prefix_bit": 24,
+                        "router_interface_id": 57
+                    }
+                ]
+            }
+        },
+        {
+            "id": 57,
+            "neighbors": [
+                {
+                    "id": 58,
+                    "weight": 1
+                },
+                {
+                    "id": 56,
+                    "weight": 1
+                }
+            ],
+            "forwarding_table": {
+                "entries": [
+                    {
+                        "prefix": "192.168.55.0",
+                        "prefix_bit": 24,
+                        "router_interface_id": 58
+                    }
+                ]
+            }
+        },
+        {
+            "id": 58,
+            "neighbors": [
+                {
+                    "id": 59,
+                    "weight": 1
+                },
+                {
+                    "id": 57,
+                    "weight": 1
+                }
+            ],
+            "forwarding_table": {
+                "entries": [
+                    {
+                        "prefix": "192.168.55.0",
+                        "prefix_bit": 24,
+                        "router_interface_id": 59
+                    }
+                ]
+            }
+        },
+        {
+            "id": 59,
+            "neighbors": [
+                {
+                    "id": 60,
+                    "weight": 1
+                },
+                {
+                    "id": 58,
+                    "weight": 1
+                }
+            ],
+            "forwarding_table": {
+                "entries": [
+                    {
+                        "prefix": "192.168.55.0",
+                        "prefix_bit": 24,
+                        "router_interface_id": 60
+                    }
+                ]
+            }
+        },
+        {
+            "id": 60,
+            "neighbors": [
+                {
+                    "id": 61,
+                    "weight": 1
+                },
+                {
+                    "id": 59,
+                    "weight": 1
+                }
+            ],
+            "forwarding_table": {
+                "entries": [
+                    {
+                        "prefix": "192.168.55.0",
+                        "prefix_bit": 24,
+                        "router_interface_id": 61
+                    }
+                ]
+            }
+        },
+        {
+            "id": 61,
+            "neighbors": [
+                {
+                    "id": 62,
+                    "weight": 1
+                },
+                {
+                    "id": 60,
+                    "weight": 1
+                }
+            ],
+            "forwarding_table": {
+                "entries": [
+                    {
+                        "prefix": "192.168.55.0",
+                        "prefix_bit": 24,
+                        "router_interface_id": 62
+                    }
+                ]
+            }
+        },
+        {
+            "id": 62,
+            "neighbors": [
+                {
+                    "id": 63,
+                    "weight": 1
+                },
+                {
+                    "id": 61,
+                    "weight": 1
+                }
+            ],
+            "forwarding_table": {
+                "entries": [
+                    {
+                        "prefix": "192.168.55.0",
+                        "prefix_bit": 24,
+                        "router_interface_id": 63
+                    }
+                ]
+            }
+        },
+        {
+            "id": 63,
+            "neighbors": [
+                {
+                    "id": 64,
+                    "weight": 1
+                },
+                {
+                    "id": 62,
+                    "weight": 1
+                }
+            ],
+            "forwarding_table": {
+                "entries": [
+                    {
+                        "prefix": "192.168.55.0",
+                        "prefix_bit": 24,
+                        "router_interface_id": 64
+                    }
+                ]
+            }
+        },
+        {
+            "id": 64,
+            "neighbors": [
+                {
+                    "id": 65,
+                    "weight": 1
+                },
+                {
+                    "id": 63,
+                    "weight": 1
+                }
+            ],
+            "forwarding_table": {
+                "entries": [
+                    {
+                        "prefix": "192.168.55.0",
+                        "prefix_bit": 24,
+                        "router_interface_id": 65
+                    }
+                ]
+            }
+        },
+        {
+            "id": 65,
+            "neighbors": [
+                {
+                    "id": 66,
+                    "weight": 1
+                },
+                {
+                    "id": 64,
+                    "weight": 1
+                }
+            ],
+            "forwarding_table": {
+                "entries": [
+                    {
+                        "prefix": "192.168.55.0",
+                        "prefix_bit": 24,
+                        "router_interface_id": 66
+                    }
+                ]
+            }
+        },
+        {
+            "id": 66,
+            "neighbors": [
+                {
+                    "id": 67,
+                    "weight": 1
+                },
+                {
+                    "id": 65,
+                    "weight": 1
+                }
+            ],
+            "forwarding_table": {
+                "entries": [
+                    {
+                        "prefix": "192.168.55.0",
+                        "prefix_bit": 24,
+                        "router_interface_id": 67
+                    }
+                ]
+            }
+        },
+        {
+            "id": 67,
+            "neighbors": [
+                {
+                    "id": 68,
+                    "weight": 1
+                },
+                {
+                    "id": 66,
+                    "weight": 1
+                }
+            ],
+            "forwarding_table": {
+                "entries": [
+                    {
+                        "prefix": "192.168.55.0",
+                        "prefix_bit": 24,
+                        "router_interface_id": 68
+                    }
+                ]
+            }
+        },
+        {
+            "id": 68,
+            "neighbors": [
+                {
+                    "id": 69,
+                    "weight": 1
+                },
+                {
+                    "id": 67,
+                    "weight": 1
+                }
+            ],
+            "forwarding_table": {
+                "entries": [
+                    {
+                        "prefix": "192.168.55.0",
+                        "prefix_bit": 24,
+                        "router_interface_id": 69
+                    }
+                ]
+            }
+        },
+        {
+            "id": 69,
+            "neighbors": [
+                {
+                    "id": 70,
+                    "weight": 1
+                },
+                {
+                    "id": 68,
+                    "weight": 1
+                }
+            ],
+            "forwarding_table": {
+                "entries": [
+                    {
+                        "prefix": "192.168.55.0",
+                        "prefix_bit": 24,
+                        "router_interface_id": 70
+                    }
+                ]
+            }
+        },
+        {
+            "id": 70,
+            "neighbors": [
+                {
+                    "id": 71,
+                    "weight": 1
+                },
+                {
+                    "id": 69,
+                    "weight": 1
+                }
+            ],
+            "forwarding_table": {
+                "entries": [
+                    {
+                        "prefix": "192.168.55.0",
+                        "prefix_bit": 24,
+                        "router_interface_id": 71
+                    }
+                ]
+            }
+        },
+        {
+            "id": 71,
+            "neighbors": [
+                {
+                    "id": 72,
+                    "weight": 1
+                },
+                {
+                    "id": 70,
+                    "weight": 1
+                }
+            ],
+            "forwarding_table": {
+                "entries": [
+                    {
+                        "prefix": "192.168.55.0",
+                        "prefix_bit": 24,
+                        "router_interface_id": 72
+                    }
+                ]
+            }
+        },
+        {
+            "id": 72,
+            "neighbors": [
+                {
+                    "id": 73,
+                    "weight": 1
+                },
+                {
+                    "id": 71,
+                    "weight": 1
+                }
+            ],
+            "forwarding_table": {
+                "entries": [
+                    {
+                        "prefix": "192.168.55.0",
+                        "prefix_bit": 24,
+                        "router_interface_id": 73
+                    }
+                ]
+            }
+        },
+        {
+            "id": 73,
+            "neighbors": [
+                {
+                    "id": 74,
+                    "weight": 1
+                },
+                {
+                    "id": 72,
+                    "weight": 1
+                }
+            ],
+            "forwarding_table": {
+                "entries": [
+                    {
+                        "prefix": "192.168.55.0",
+                        "prefix_bit": 24,
+                        "router_interface_id": 74
+                    }
+                ]
+            }
+        },
+        {
+            "id": 74,
+            "neighbors": [
+                {
+                    "id": 75,
+                    "weight": 1
+                },
+                {
+                    "id": 73,
+                    "weight": 1
+                }
+            ],
+            "forwarding_table": {
+                "entries": [
+                    {
+                        "prefix": "192.168.55.0",
+                        "prefix_bit": 24,
+                        "router_interface_id": 75
+                    }
+                ]
+            }
+        },
+        {
+            "id": 75,
+            "neighbors": [
+                {
+                    "id": 76,
+                    "weight": 1
+                },
+                {
+                    "id": 74,
+                    "weight": 1
+                }
+            ],
+            "forwarding_table": {
+                "entries": [
+                    {
+                        "prefix": "192.168.55.0",
+                        "prefix_bit": 24,
+                        "router_interface_id": 76
+                    }
+                ]
+            }
+        },
+        {
+            "id": 76,
+            "neighbors": [
+                {
+                    "id": 77,
+                    "weight": 1
+                },
+                {
+                    "id": 75,
+                    "weight": 1
+                }
+            ],
+            "forwarding_table": {
+                "entries": [
+                    {
+                        "prefix": "192.168.55.0",
+                        "prefix_bit": 24,
+                        "router_interface_id": 77
+                    }
+                ]
+            }
+        },
+        {
+            "id": 77,
+            "neighbors": [
+                {
+                    "id": 78,
+                    "weight": 1
+                },
+                {
+                    "id": 76,
+                    "weight": 1
+                }
+            ],
+            "forwarding_table": {
+                "entries": [
+                    {
+                        "prefix": "192.168.55.0",
+                        "prefix_bit": 24,
+                        "router_interface_id": 78
+                    }
+                ]
+            }
+        },
+        {
+            "id": 78,
+            "neighbors": [
+                {
+                    "id": 79,
+                    "weight": 1
+                },
+                {
+                    "id": 77,
+                    "weight": 1
+                }
+            ],
+            "forwarding_table": {
+                "entries": [
+                    {
+                        "prefix": "192.168.55.0",
+                        "prefix_bit": 24,
+                        "router_interface_id": 79
+                    }
+                ]
+            }
+        },
+        {
+            "id": 79,
+            "neighbors": [
+                {
+                    "id": 80,
+                    "weight": 1
+                },
+                {
+                    "id": 78,
+                    "weight": 1
+                }
+            ],
+            "forwarding_table": {
+                "entries": [
+                    {
+                        "prefix": "192.168.55.0",
+                        "prefix_bit": 24,
+                        "router_interface_id": 80
+                    }
+                ]
+            }
+        },
+        {
+            "id": 80,
+            "neighbors": [
+                {
+                    "id": 81,
+                    "weight": 1
+                },
+                {
+                    "id": 79,
+                    "weight": 1
+                }
+            ],
+            "forwarding_table": {
+                "entries": [
+                    {
+                        "prefix": "192.168.55.0",
+                        "prefix_bit": 24,
+                        "router_interface_id": 81
+                    }
+                ]
+            }
+        },
+        {
+            "id": 81,
+            "neighbors": [
+                {
+                    "id": 82,
+                    "weight": 1
+                },
+                {
+                    "id": 80,
+                    "weight": 1
+                }
+            ],
+            "forwarding_table": {
+                "entries": [
+                    {
+                        "prefix": "192.168.55.0",
+                        "prefix_bit": 24,
+                        "router_interface_id": 82
+                    }
+                ]
+            }
+        },
+        {
+            "id": 82,
+            "neighbors": [
+                {
+                    "id": 83,
+                    "weight": 1
+                },
+                {
+                    "id": 81,
+                    "weight": 1
+                }
+            ],
+            "forwarding_table": {
+                "entries": [
+                    {
+                        "prefix": "192.168.55.0",
+                        "prefix_bit": 24,
+                        "router_interface_id": 83
+                    }
+                ]
+            }
+        },
+        {
+            "id": 83,
+            "neighbors": [
+                {
+                    "id": 84,
+                    "weight": 1
+                },
+                {
+                    "id": 82,
+                    "weight": 1
+                }
+            ],
+            "forwarding_table": {
+                "entries": [
+                    {
+                        "prefix": "192.168.55.0",
+                        "prefix_bit": 24,
+                        "router_interface_id": 84
+                    }
+                ]
+            }
+        },
+        {
+            "id": 84,
+            "neighbors": [
+                {
+                    "id": 85,
+                    "weight": 1
+                },
+                {
+                    "id": 83,
+                    "weight": 1
+                }
+            ],
+            "forwarding_table": {
+                "entries": [
+                    {
+                        "prefix": "192.168.55.0",
+                        "prefix_bit": 24,
+                        "router_interface_id": 85
+                    }
+                ]
+            }
+        },
+        {
+            "id": 85,
+            "neighbors": [
+                {
+                    "id": 86,
+                    "weight": 1
+                },
+                {
+                    "id": 84,
+                    "weight": 1
+                }
+            ],
+            "forwarding_table": {
+                "entries": [
+                    {
+                        "prefix": "192.168.55.0",
+                        "prefix_bit": 24,
+                        "router_interface_id": 86
+                    }
+                ]
+            }
+        },
+        {
+            "id": 86,
+            "neighbors": [
+                {
+                    "id": 87,
+                    "weight": 1
+                },
+                {
+                    "id": 85,
+                    "weight": 1
+                }
+            ],
+            "forwarding_table": {
+                "entries": [
+                    {
+                        "prefix": "192.168.55.0",
+                        "prefix_bit": 24,
+                        "router_interface_id": 87
+                    }
+                ]
+            }
+        },
+        {
+            "id": 87,
+            "neighbors": [
+                {
+                    "id": 88,
+                    "weight": 1
+                },
+                {
+                    "id": 86,
+                    "weight": 1
+                }
+            ],
+            "forwarding_table": {
+                "entries": [
+                    {
+                        "prefix": "192.168.55.0",
+                        "prefix_bit": 24,
+                        "router_interface_id": 88
+                    }
+                ]
+            }
+        },
+        {
+            "id": 88,
+            "neighbors": [
+                {
+                    "id": 89,
+                    "weight": 1
+                },
+                {
+                    "id": 87,
+                    "weight": 1
+                }
+            ],
+            "forwarding_table": {
+                "entries": [
+                    {
+                        "prefix": "192.168.55.0",
+                        "prefix_bit": 24,
+                        "router_interface_id": 89
+                    }
+                ]
+            }
+        },
+        {
+            "id": 89,
+            "neighbors": [
+                {
+                    "id": 90,
+                    "weight": 1
+                },
+                {
+                    "id": 88,
+                    "weight": 1
+                }
+            ],
+            "forwarding_table": {
+                "entries": [
+                    {
+                        "prefix": "192.168.55.0",
+                        "prefix_bit": 24,
+                        "router_interface_id": 90
+                    }
+                ]
+            }
+        },
+        {
+            "id": 90,
+            "neighbors": [
+                {
+                    "id": 91,
+                    "weight": 1
+                },
+                {
+                    "id": 89,
+                    "weight": 1
+                }
+            ],
+            "forwarding_table": {
+                "entries": [
+                    {
+                        "prefix": "192.168.55.0",
+                        "prefix_bit": 24,
+                        "router_interface_id": 91
+                    }
+                ]
+            }
+        },
+        {
+            "id": 91,
+            "neighbors": [
+                {
+                    "id": 92,
+                    "weight": 1
+                },
+                {
+                    "id": 90,
+                    "weight": 1
+                }
+            ],
+            "forwarding_table": {
+                "entries": [
+                    {
+                        "prefix": "192.168.55.0",
+                        "prefix_bit": 24,
+                        "router_interface_id": 92
+                    }
+                ]
+            }
+        },
+        {
+            "id": 92,
+            "neighbors": [
+                {
+                    "id": 93,
+                    "weight": 1
+                },
+                {
+                    "id": 91,
+                    "weight": 1
+                }
+            ],
+            "forwarding_table": {
+                "entries": [
+                    {
+                        "prefix": "192.168.55.0",
+                        "prefix_bit": 24,
+                        "router_interface_id": 93
+                    }
+                ]
+            }
+        },
+        {
+            "id": 93,
+            "neighbors": [
+                {
+                    "id": 94,
+                    "weight": 1
+                },
+                {
+                    "id": 92,
+                    "weight": 1
+                }
+            ],
+            "forwarding_table": {
+                "entries": [
+                    {
+                        "prefix": "192.168.55.0",
+                        "prefix_bit": 24,
+                        "router_interface_id": 94
+                    }
+                ]
+            }
+        },
+        {
+            "id": 94,
+            "neighbors": [
+                {
+                    "id": 95,
+                    "weight": 1
+                },
+                {
+                    "id": 93,
+                    "weight": 1
+                }
+            ],
+            "forwarding_table": {
+                "entries": [
+                    {
+                        "prefix": "192.168.55.0",
+                        "prefix_bit": 24,
+                        "router_interface_id": 95
+                    }
+                ]
+            }
+        },
+        {
+            "id": 95,
+            "neighbors": [
+                {
+                    "id": 96,
+                    "weight": 1
+                },
+                {
+                    "id": 94,
+                    "weight": 1
+                }
+            ],
+            "forwarding_table": {
+                "entries": [
+                    {
+                        "prefix": "192.168.55.0",
+                        "prefix_bit": 24,
+                        "router_interface_id": 96
+                    }
+                ]
+            }
+        },
+        {
+            "id": 96,
+            "neighbors": [
+                {
+                    "id": 97,
+                    "weight": 1
+                },
+                {
+                    "id": 95,
+                    "weight": 1
+                }
+            ],
+            "forwarding_table": {
+                "entries": [
+                    {
+                        "prefix": "192.168.55.0",
+                        "prefix_bit": 24,
+                        "router_interface_id": 97
+                    }
+                ]
+            }
+        },
+        {
+            "id": 97,
+            "neighbors": [
+                {
+                    "id": 98,
+                    "weight": 1
+                },
+                {
+                    "id": 96,
+                    "weight": 1
+                }
+            ],
+            "forwarding_table": {
+                "entries": [
+                    {
+                        "prefix": "192.168.55.0",
+                        "prefix_bit": 24,
+                        "router_interface_id": 98
+                    }
+                ]
+            }
+        },
+        {
+            "id": 98,
+            "neighbors": [
+                {
+                    "id": 99,
+                    "weight": 1
+                },
+                {
+                    "id": 97,
+                    "weight": 1
+                }
+            ],
+            "forwarding_table": {
+                "entries": [
+                    {
+                        "prefix": "192.168.55.0",
+                        "prefix_bit": 24,
+                        "router_interface_id": 99
+                    }
+                ]
+            }
+        },
+        {
+            "id": 99,
+            "neighbors": [
+                {
+                    "id": 98,
+                    "weight": 1
+                },
+                {
+                    "id": 100,
+                    "weight": 1
+                }
+            ],
+            "forwarding_table": {
+                "entries": [
+                    {
+                        "prefix": "192.168.55.0",
+                        "prefix_bit": 24,
+                        "router_interface_id": 0
+                    }
+                ]
+            }
+        },
+        {
+            "id": 100,
+            "neighbors": [
+                {
+                    "id": 99,
+                    "weight": 1
+                }
+            ],
+            "forwarding_table": {
+                "entries": []
+            }
         }
     ],
     "hosts": [
@@ -50,12 +2216,12 @@
             "packets_to_send": [
                 {
                     "dst_ip_addr": "192.168.55.1",
-                    "ttl": 5
+                    "ttl": 1000
                 }
             ]
         },
         {
-            "gateway_router_id": 2,
+            "gateway_router_id": 100,
             "ip_addr": "192.168.55.1",
             "packets_to_send": []
         }

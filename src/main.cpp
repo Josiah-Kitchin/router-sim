@@ -8,12 +8,14 @@
 
 int main(int argc, char** argv)
 {
-    const std::string params_file = argc < 2 ? "params.json" : argv[1];
+    const std::string params_file = "../params.json";
 
     Params params = parse_params(params_file);
 
     if (!params.log_file_path.empty())
         Logger::get_instance().open_log_file(params.log_file_path);
+
+    Logger::get_instance().set_mode(Logger::Mode::DEBUG);
 
     std::unique_ptr<Topology> topology = get_topology_type(params);
 
@@ -27,9 +29,13 @@ int main(int argc, char** argv)
     for (auto& host : hosts)
         routers[host.gateway_router].set_connected_host(&host);
 
+    std::unique_ptr<Control> control = get_control_type(params);
+
+    control->generate_forwarding_tables(routers, hosts);
+
     run_packet_switching_loop(routers, hosts, params.packets_per_round, params.forwards_per_round);
 
-    std::cout << "Router Simulation Complete" << std::endl;
+    std::cout << "*========== Simulation Complete ==========*" << std::endl;
 
     return 0;
 }

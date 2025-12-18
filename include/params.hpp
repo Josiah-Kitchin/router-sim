@@ -3,6 +3,7 @@
 #pragma once
 
 #include "topology/topology.hpp"
+#include "control_plane/control.hpp"
 #include <memory>
 #include <nlohmann/json.hpp>
 
@@ -19,6 +20,12 @@ struct Params
     };
     TopologyType topology_type;
 
+    enum class ControlType
+    {
+        OSPF
+    };
+    ControlType control_type; 
+
     // JSON Specific
     std::string json_topology_file_path;
 
@@ -29,3 +36,4 @@ struct Params
 Params parse_params(const std::string& param_json_file);
 
 std::unique_ptr<Topology> get_topology_type(const Params& params);
+std::unique_ptr<Control> get_control_type(const Params& params);

@@ -2,6 +2,7 @@
 
 #include "params.hpp"
 #include "topology/json_topology.hpp"
+#include "control_plane/ospf.hpp"
 #include <fstream> 
 
 
@@ -27,6 +28,15 @@ Params parse_params(const std::string& params_json_file_path)
         throw std::logic_error("Unknown Topology Type");
     }
 
+    if (json_params["control_type"] == "OSPF")
+    {
+        params.control_type = Params::ControlType::OSPF;
+    }
+    else
+    {
+        throw std::logic_error("Unknown Control Type");
+    }
+
     params.log_file_path = json_params.contains("log_file_path") && !json_params["log_file_path"].empty() ? json_params["log_file_path"] : "";
 
     params.packets_per_round = json_params["packets_per_round"];
@@ -47,3 +57,17 @@ std::unique_ptr<Topology> get_topology_type(const Params& params)
         throw std::logic_error("Topology Type Unimplemented");
     }
 }
+
+std::unique_ptr<Control> get_control_type(const Params& params)
+{
+    switch (params.control_type)
+    {
+        case (Params::ControlType::OSPF): 
+            return std::make_unique<OSPFControl>();
+            break;
+        default: 
+            throw std::logic_error("Control Type Unimplemented");
+    }
+
+}
+
